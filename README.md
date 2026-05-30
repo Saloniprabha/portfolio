@@ -32,7 +32,7 @@ This portfolio highlights some of the projects I have built while learning and e
 
 ## 🌐 Live Demo
 
-Add your deployed portfolio link here.
+portfolio-saloni-prabha-92.vercel.app
 
 ## 📬 Contact
 
