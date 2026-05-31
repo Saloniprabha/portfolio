@@ -55,7 +55,7 @@ export default function Banner(): React.JSX.Element {
           <div className="flex justify-center lg:justify-end relative w-full lg:w-auto">
             <div className="relative top-10">
               {/* Mobile: Hello text positioned on top of image */}
-              <div className="lg:hidden  -top-150 z-10">
+              <div className="lg:hidden relative z-10 mb-4">
                 <div className="relative inline-block  ">
                   <Image
                     src="/assets/arrow.png"
@@ -79,22 +79,25 @@ export default function Banner(): React.JSX.Element {
                 alt="Saloni Prabha - Frontend Developer and Designer"
                 width={300}
                 height={300}
-                className=" max-w-md absolute"
+                className="w-64 sm:w-72 md:w-80 h-auto"
                 style={{ width: "auto", height: "auto" }}
                 priority
               />
-              <Image
+              {/* <Image
                 src="/assets/me.png"
                 alt="Saloni Prabha - Frontend Developer and Designer"
                 width={300}
                 height={300}
-                className="max-w-md "
+                className="w-64 sm:w-72 md:w-80 h-auto"
                 style={{ width: "auto", height: "auto" }}
                 priority
-              />
+              /> */}
             </div>
           </div>
-          <div id="about" className="flex-1 space-y-6 text-center lg:text-left">
+          <div
+             id="about"
+            className="flex-1 space-y-6 text-center lg:text-left mt-8 lg:mt-0"
+          >
             {/* Desktop: Hello text in original position */}
             <div className="hidden lg:inline-block relative">
               <Image
@@ -115,7 +118,7 @@ export default function Banner(): React.JSX.Element {
             </div>
             <div className="">
               <p className="text-2xl"> A Frontend Developer who </p>
-              <h1 className="text-5xl tracking-tight lg:text-7xl font-semibold text-white leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl tracking-tight font-semibold text-white leading-tight">
                 Judges a website
                 <br /> by its{" "}
                 <span className="relative inline-block">
@@ -133,7 +136,7 @@ export default function Banner(): React.JSX.Element {
           </div>
         </div>
         <div className="space-y-3 pt-15 text-center lg:text-left">
-          <p className="text-5xl text-white font-bold">
+          <p className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold break-words">
             I&apos;m a {displayedText}
             <span className="animate-pulse">|</span>
           </p>
