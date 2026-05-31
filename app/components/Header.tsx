@@ -8,14 +8,14 @@ export default function Header(): React.JSX.Element {
         <div className="container mx-auto max-w-6xl flex items-center justify-between h-full">
           
           <ul className="flex items-center gap-4 list-none m-0 p-0">
-            <li className="m-0 p-0">
+            {/* <li className="m-0 p-0">
               <Link 
                 href="#home" 
                 className="text-white hover:text-purple-400 transition-colors text-base font-normal"
               >
                 Home
               </Link>
-            </li>
+            </li> */}
             <li className="m-0 p-0">
               <Link 
                 href="#about" 
