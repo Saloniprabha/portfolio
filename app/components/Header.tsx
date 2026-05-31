@@ -7,7 +7,7 @@ export default function Header(): React.JSX.Element {
       <nav className="px-6 py-4">
         <div className="container mx-auto max-w-6xl flex items-center justify-between h-full">
           
-          <ul className="flex items-center gap-8 list-none m-0 p-0">
+          <ul className="flex items-center gap-4 list-none m-0 p-0">
             <li className="m-0 p-0">
               <Link 
                 href="#home" 
