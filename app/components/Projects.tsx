@@ -11,6 +11,25 @@ interface Project {
 const featuredProjects: Project[] = [
   {
     id: 1,
+    title: "Ask AI- AI-powered chatbot",
+    description: `Ask AI is a modern AI-powered chatbot built with React and Gemini AI. It allows users to ask questions and receive intelligent, real-time responses through a clean and responsive interface.
+       
+      Tech Stack:
+       • React.js • Tailwind CSS • JavaScript (ES6+) • Gemini API • Local Storage`,
+    link: "https://ask-ai.surge.sh",
+    image: "/projects/as.png",
+  },
+  {
+    id: 2,
+    title: "Facial Recognition Attendance System",
+    description: `A Python-based desktop application that automates attendance management using facial recognition technology. The system identifies registered students through a webcam and marks attendance automatically, reducing manual effort and minimizing proxy attendance.
+      
+      Tech Stack:
+      • Python • OpenCV • Tkinter • SQLite`,
+    image: "/projects/attendancesys.png",
+  },
+  {
+    id: 3,
     title: "TaskFlow – Todo Application",
     description: `Developed a modern Todo application that allows users to add, edit, delete, and track tasks seamlessly. Implemented local storage for persistent data management and focused on creating an intuitive, mobile-friendly user experience.
        
@@ -20,7 +39,7 @@ const featuredProjects: Project[] = [
     image: "/projects/project-1.png",
   },
   {
-    id: 2,
+    id: 4,
     title: "Learnova – E-Learning Landing Page",
     description: `Built a responsive e-learning website landing page using HTML and CSS, featuring a clean design, intuitive layout, and modern user interface to enhance the online learning experience.
       
