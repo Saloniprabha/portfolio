@@ -39,7 +39,7 @@ https://portfolio-saloni-prabha-92.vercel.app/
 Feel free to connect with me:
 
 - GitHub: https://github.com/Saloniprabha
-- LinkedIn: https://linkedin.com/in/saloni-p-5761912ba
+- LinkedIn: https://linkedin.com/in/saloni-prabha
 - Email: prabhasaloni1705@gmail.com
 
 
