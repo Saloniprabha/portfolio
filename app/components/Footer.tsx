@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 
 export default function Footer(): React.JSX.Element {
@@ -10,21 +11,54 @@ export default function Footer(): React.JSX.Element {
             Contact
           </h2>
           <p className="text-md text-white/80 max-w-2xl mx-auto mb-8">
-            Have an opportunity, internship, project, or idea in mind?
-            I&apos;d love to hear from you. Let&apos;s connect and 
-            create something great together.
+            Have an opportunity, internship, project, or idea in mind? I&apos;d
+            love to hear from you. Let&apos;s connect and create something great
+            together.
           </p>
-          <a
-            href="mailto:prabhasaloni1705@gmail.com"
-            className="text-md text-purple-400 hover:text-purple-300 transition-colors"
-          >
-            prabhasaloni1705@gmail.com
-          </a>
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex items-center justify-center gap-3">
+              <MdEmail className="text-purple-400 text-3xl" />
+
+              <a
+                href="mailto:prabhasaloni1705@gmail.com"
+                className="text-md text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                prabhasaloni1705@gmail.com
+              </a>
+            </div>
+
+            <a
+              href="/Saloni_Prabha_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 rounded-xl
+               bg-gradient-to-r from-purple-600 to-violet-500
+               px-8 py-4 text-white font-semibold
+               shadow-lg shadow-purple-500/20
+               hover:scale-105 hover:shadow-purple-500/40
+               transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v12m0 0l4-4m-4 4l-4-4M5 21h14"
+                />
+              </svg>
+              Download Resume
+            </a>
+          </div>
         </div>
 
         {/* Social Media Icons */}
         <div className="flex justify-center gap-6 mt-12">
-
           <Link
             href="https://github.com/Saloniprabha"
             target="_blank"
@@ -66,4 +100,3 @@ export default function Footer(): React.JSX.Element {
     </footer>
   );
 }
-
