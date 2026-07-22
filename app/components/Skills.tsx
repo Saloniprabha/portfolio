@@ -1,71 +1,136 @@
-import Image from "next/image";
+const skillCategories = [
+  {
+    title: "Frontend Development",
+    description: "Building responsive and interactive web applications",
+    skills: [
+      "React.js",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+    ],
+    size: "lg:col-span-2",
+  },
 
-const skills = [
-  { name: "HTML5", icon: "/skills/html.png" },
-  { name: "CSS3", icon: "/skills/css.png" },
-  { name: "JavaScript", icon: "/skills/js.png" },
-  { name: "React.js", icon: "/skills/react.png" },
-  { name: "Python", icon: "/skills/python.png" },
-  { name: "SQL", icon: "/skills/sql.png" },
-  { name: "Git", icon: "/skills/git.png" },
-  { name: "VS Code", icon: "/skills/vs.png" },
-  { name: "NumPy", icon: "/skills/numpy.png" },
-  { name: "Jupyter", icon: "/skills/jupyter.png" },
+  {
+    title: "Programming & CS Fundamentals",
+    description: "Core concepts for software development",
+    skills: [
+      "Python",
+      "Data Structures & Algorithms",
+      "OOP Concepts",
+      "DBMS",
+      "Computer Networks",
+      "SQL",
+    ],
+    size: "lg:col-span-1",
+  },
+
+  {
+    title: "Tools & Development",
+    description: "Tools I use for development and deployment",
+    skills: ["Git", "GitHub", "VS Code", "Vite", "Vercel", "Netlify"],
+    size: "lg:col-span-1",
+  },
+
+  {
+    title: "Data & Analytics",
+    description: "Data analysis and visualization skills",
+    skills: ["Pandas", "NumPy", "Matplotlib", "Power BI", "Excel"],
+    size: "lg:col-span-2",
+  },
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6">
       <div className="container mx-auto max-w-6xl">
-
         <h2 className="text-4xl lg:text-5xl font-bold text-center text-white mb-5">
           Skills & Technologies
         </h2>
 
         <p className="text-center text-white/70 max-w-2xl mx-auto mb-16">
-          Technologies and tools I use to build responsive,
-          scalable and user-friendly web applications.
+          Technologies and tools I use to build responsive, scalable and
+          user-friendly applications.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-
-          {skills.map((skill) => (
+        <div
+          className="
+          grid
+          grid-cols-1
+          lg:grid-cols-3
+          gap-6
+        "
+        >
+          {skillCategories.map((category) => (
             <div
-              key={skill.name}
-              className="
+              key={category.title}
+              className={`
+                ${category.size}
                 group
-                rounded-2xl
+                rounded-3xl
+                bg-white/5
+                backdrop-blur-md
                 border
-                border-purple-500/30
-                bg-[#141021]
-                p-6
-                flex
-                flex-col
-                items-center
-                justify-center
-                hover:border-purple-400
-                hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]
-                hover:-translate-y-2
+                border-white/10
+                p-8
+                hover:border-purple-400/50
+                hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]
                 transition-all
                 duration-300
-              "
+              `}
             >
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={55}
-                height={55}
-                className="object-contain mb-5 transition-transform duration-300 group-hover:scale-110"
-              />
-
-              <h3 className="text-white font-semibold text-lg text-center">
-                {skill.name}
+              <h3
+                className="
+                text-2xl
+                font-bold
+                text-white
+                mb-3
+              "
+              >
+                {category.title}
               </h3>
+
+              <p
+                className="
+                text-white/60
+                mb-6
+              "
+              >
+                {category.description}
+              </p>
+
+              <div
+                className="
+                flex
+                flex-wrap
+                gap-3
+              "
+              >
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="
+                      px-4
+                      py-2
+                      rounded-full
+                      bg-purple-500/10
+                      border
+                      border-purple-400/20
+                      text-purple-200
+                      text-sm
+                      hover:bg-purple-500/20
+                      transition
+                    "
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

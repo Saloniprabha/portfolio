@@ -4,7 +4,12 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Banner(): React.JSX.Element {
-  const texts = ["Frontend Developer", "Website Developer", "React Native Developer"];
+  const texts = [
+    "Frontend Developer",
+    "Software Developer",
+    "Website Developer",
+    "React Native Developer",
+  ];
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -12,7 +17,7 @@ export default function Banner(): React.JSX.Element {
 
   useEffect(() => {
     const currentText = texts[currentTextIndex];
-    
+
     if (!isDeleting) {
       // Typing effect
       if (displayedText.length < currentText.length) {
@@ -65,9 +70,9 @@ export default function Banner(): React.JSX.Element {
                     className="absolute top-5 rotate-z-280"
                     style={{ width: "auto", height: "auto" }}
                   />
-                  <div className="relative " >
+                  <div className="relative ">
                     <p className="text-white text-lg whitespace-nowrap ">
-                      Hello! I Am {" "}
+                      Hello! I Am{" "}
                       <span className="text-purple-400">Saloni Prabha</span>
                     </p>
                   </div>
@@ -83,19 +88,10 @@ export default function Banner(): React.JSX.Element {
                 style={{ width: "auto", height: "auto" }}
                 priority
               />
-              {/* <Image
-                src="/assets/me.png"
-                alt="Saloni Prabha - Frontend Developer and Designer"
-                width={300}
-                height={300}
-                className="w-64 sm:w-72 md:w-80 h-auto"
-                style={{ width: "auto", height: "auto" }}
-                priority
-              /> */}
             </div>
           </div>
           <div
-             id="about"
+            id="about"
             className="flex-1 space-y-6 text-center lg:text-left mt-8 lg:mt-0"
           >
             {/* Desktop: Hello text in original position */}
@@ -106,7 +102,12 @@ export default function Banner(): React.JSX.Element {
                 width={100}
                 height={100}
                 className="absolute "
-                style={{ left: "-100px", top: "-50px", width: "auto", height: "auto" }}
+                style={{
+                  left: "-100px",
+                  top: "-50px",
+                  width: "auto",
+                  height: "auto",
+                }}
               />
               <div style={{ bottom: 40, position: "relative" }}>
                 <p className="text-white text-lg">
@@ -117,20 +118,26 @@ export default function Banner(): React.JSX.Element {
               <div className="absolute -bottom-2 left-8 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white/10"></div>
             </div>
             <div className="">
-              <p className="text-2xl"> A Frontend Developer who </p>
+              <p className="text-2xl"> A Developer who </p>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl tracking-tight font-semibold text-white leading-tight">
-                Judges a website
-                <br /> by its{" "}
+                judges solutions
+                <br /> by their{" "}
                 <span className="relative inline-block">
-                  <Image src="/assets/circle.png" alt="Circle" width={280} height={200} className="absolute mt-2" />
+                  <Image
+                    src="/assets/circle.png"
+                    alt="Circle"
+                    width={280}
+                    height={200}
+                    className="absolute mt-2"
+                  />
                   <span className="bg-gradient-to-r from-violet-600 via-violet-400 to-violet-600 bg-clip-text text-transparent">
-                    interface
+                    impact
                   </span>
                 </span>
                 ...
               </h1>
               <p className="text-md text-white/80">
-                Because users notice design before code
+                because great technology exists to solve real problems
               </p>
             </div>
           </div>
@@ -141,17 +148,31 @@ export default function Banner(): React.JSX.Element {
             <span className="animate-pulse">|</span>
           </p>
           <p className="text-lg lg:text-xl text-white/90 tracking-wide flex flex-wrap items-center justify-center lg:justify-start gap-2">
-            <span>Currently, I&apos;m pursuing MCA and learning, building, and growing as a </span>
+            <span>
+              Currently, I&apos;m pursuing MCA and learning, building, and
+              growing as a Developer with a focus on{" "}
+            </span>
             <span className="flex items-center gap-2">
-              <Image src="/assets/front.png" alt="front" width={20} height={20} className="w-5 h-5" style={{ width: "auto", height: "auto" }} />
-              <span className="text-blue-400 font-semibold">Frontend Developer,</span>
+              <Image
+                src="/assets/front.png"
+                alt="front"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <span className="text-blue-400 font-semibold">
+                modern web technologies.
+              </span>
             </span>
           </p>
           <p className="text-lg text-white/80 max-w-2xl mt-15 mx-auto lg:mx-0">
-            I'm currently pursuing MCA from IGNOU and building my skills in
-            Frontend Development. I enjoy creating clean, responsive, and user-friendly
-            websites using modern web technologies and am currently seeking opportunities
-            to grow as a developer.
+            I'm currently pursuing MCA and building my skills in software
+            development with a focus on modern web technologies. I enjoy
+            creating responsive, intuitive, and impactful applications while
+            exploring problem-solving and computer science fundamentals. I am
+            currently seeking opportunities to grow and contribute as a
+            developer.
           </p>
         </div>
       </div>
